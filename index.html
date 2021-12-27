@@ -29,9 +29,146 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!-- Header Section -->
+  <header id="main-header">
+    <!-- Todo: Social Links -->
+    <div class="header-top d-none d-md-block">
+      <div class="container bg-social-links px-3">
+        <div class="d-sm-flex justify-content-between align-item-center">
+          <p>FREE express international delivery + EASY returns</p>
+          <div class="social">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <div class="shop-category dropdown ">
+          <i class="bi bi-list"></i>
+          <a class="dropdown-toggle" id="shopCategory" data-bs-toggle="dropdown" aria-expanded="false">Shop by
+            Category</a>
+          <div class="wrap-menu dropdown-menu">
+            <a href="#" class="dropdown-item">
+              <span>Action</span>
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <a href="#" class="dropdown-item">Another action</a>
+          </div>
 
+        </div>
+        <div class="logo logo-center mx-auto">
+          <a class="navbar-brand" href="#"><img src="" alt="TopNotch Agp"></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div class="nav-item nav-round-icon bg-green-inverse">
+              <a class="nav-link" aria-current="page" href="#">
+                <i class="bi bi-person-fill"></i>
+              </a>
+            </div>
+            <div class="nav-item nav-round-icon bg-orange-inverse">
+              <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+            </div>
+            <div class="nav-item  d-flex justify-content-between align-items-center">
+              <div class="nav-round-icon bg-powder-inverse">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-basket-fill"></i>
+                  <span class="cart-item-count">4</span>
+                </a>
+              </div>
+              <span class="amount">#0.00</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <footer id="main-footer" class="footer">
+    <div class="container footer-bg footer-spacing">
+      <div class="row g-3">
+        <div class="col-lg-2 col-12 col-md-3">
+          <h4 class="footer-header">Contact</h4>
+          <div class="footer-content">
+            <p class="telephone">+44 345 678 903</p>
+            <p class="email">contact@mail.com</p>
+            <a href="#" class="footer-nav-link">Find a store</a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-12 col-md-3">
+          <h4 class="footer-header ">CUSTOMER RERVICE</h4>
+          <div class="footer-content">
+            <a href="#" class="footer-nav-link">Contact Us</a>
+            <a href="#" class="footer-nav-link">Ordering & Payment</a>
+            <a href="#" class="footer-nav-link">Shipping</a>
+            <a href="#" class="footer-nav-link">Returns</a>
+            <a href="#" class="footer-nav-link">FAQs</a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-12 col-md-3">
+          <h4 class="footer-header">INFORMATION</h4>
+          <div class="footer-content">
+            <a href="#" class="footer-nav-link">About TopNotch</a>
+            <a href="#" class="footer-nav-link">Sell on TopNotch</a>
+            <a href="#" class="footer-nav-link">Privacy Policy</a>
+            <a href="#" class="footer-nav-link">Terms & Condition</a>
+            <a href="#" class="footer-nav-link">Press Enquiries</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 col-md-3">
+          <h4 class="footer-header">New to TopNotch</h4>
+          <div class="footer-content">
+            <p class="caption mb-4">Subscribe to our newsletter to get updates on our latest offers!</p>
+            <form action="" id="newsletterForm" class="newsletter">
+              <div class="input-group">
+                <input type="text" class="form-control" id="email" placeholder="Email Address">
+              </div>
+              <button class="btn newsletter-btn"><i class="bi bi-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 col-md-3">
+          <div class="d-flex flex-column align-items-sm-end">
+            <div class="mt-auto p-2 copyright">
+              &copy; TopNotch Agp <span class=" current-year"> 2021</span>
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <hr>
+        <div class="d-sm-flex justify-content-between align-items-center">
+          <div class="payment-method">
+            <h4 class="footer-header">PAYMENT METHODS & DELIVERY PARTNERS</h4>
+            <div class="footer-content">
+              <img src="./assets/img/card/card1.jpg" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card2.jpg" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card3.jpg" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card4.jpg" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card5.jpg" class="img-fluid me-1" alt="">
+            </div>
+          </div>
+          <div class="social">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+  </footer>
   <script src="./assets/vendor/aos/aos.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/js/app.js"></script>
