@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css">
 
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
   <!-- style -->
   <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -48,19 +51,87 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <div class="shop-category dropdown ">
+        <div class="shop-category dropdown m-5">
           <i class="bi bi-list"></i>
-          <a class="dropdown-toggle" id="shopCategory" data-bs-toggle="dropdown" aria-expanded="false">Shop by
-            Category</a>
-          <div class="wrap-menu dropdown-menu">
-            <a href="#" class="dropdown-item">
-              <span>Action</span>
-              <i class="bi bi-chevron-down"></i>
-            </a>
-            <a href="#" class="dropdown-item">Another action</a>
-          </div>
+          <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" aria-expanded="false">
+            Shop by Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
 
+              <a href="#" class="dropdown-item">
+                <i class="menu-icon fas fa-leaf"></i>
+                Fastfood
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-item" href="#" id="dropdownSubMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="menu-icon fas fa-salad"></i>
+                <span>Fruits & Nut Gifts</span>
+                <i class="arrow fal fa-chevron-right"></i>
+              </a>
+              <div class="dropdown-menu lg-width-900 md-width-640" aria-labelledby="dropdownSubMenuLink">
+                <div class="container">
+                  <div class="row my-5">
+                    <div class="col-lg-4">
+                      <div class="submenu-wrap">
+                        <h4 class="submenu-title">Fresh Berries</h4>
+                        <ul class="nav menu">
+                          <li class="nav-item"><a href="#" class="nav-link">Fruit &amp; Nut Gifts</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Mixed Fruits</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Oranges</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Bananas &amp; Plantains</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Fresh Gala Apples</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Berries</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Pears</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Produce</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Snack Foods</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="submenu-wrap">
+                        <h4 class="submenu-title">Fresh Berries</h4>
+                        <ul class="nav menu">
+                          <li class="nav-item"><a href="#" class="nav-link">Fruit &amp; Nut Gifts</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Mixed Fruits</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Oranges</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Bananas &amp; Plantains</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Fresh Gala Apples</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Berries</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Pears</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Produce</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Snack Foods</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="submenu-wrap">
+                        <h4 class="submenu-title">Fresh Berries</h4>
+                        <ul class="nav menu">
+                          <li class="nav-item"><a href="#" class="nav-link">Fruit &amp; Nut Gifts</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Mixed Fruits</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Oranges</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Bananas &amp; Plantains</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Fresh Gala Apples</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Berries</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Pears</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Produce</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Snack Foods</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
         </div>
+
         <div class="logo logo-center mx-auto">
           <a class="navbar-brand" href="#"><img src="" alt="TopNotch Agp"></a>
         </div>
