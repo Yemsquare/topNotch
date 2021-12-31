@@ -18,11 +18,14 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!-- animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <!-- Glithbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="./assets/vendor/glightbox/css/glightbox.min.css" />
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-
+  <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css">
   <!-- style -->
   <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -53,7 +56,8 @@
       </div>
     </div>
 
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between py-2">
+    <div id="main-nav"
+      class="container-fluid container-xl d-flex align-items-center justify-content-between py-2 bg-white">
       <!-- TODO:Navigation -->
       <div class="shop-category bg-success-rgba">
         <div class="dropdown">
@@ -114,7 +118,7 @@
 
       <div class="logo">
         <a href="index.h Desktop tml" class="navbar-brand">
-          <img src="./assets/img/logo.svg" width="150" height="50" alt="">
+          <img src="./assets/img/logo.png" alt="">
         </a>
       </div>
 
@@ -145,18 +149,16 @@
       </nav>
 
       <!-- TODO: Mobile Navigation -->
-      <nav class="navbar" id="navbar">
+      <nav class="navbar hide-desktop" id="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">About</a></li>
+          <li><a class="nav-link" href="#">Services</a></li>
+          <li><a class="nav-link" href="#">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="far fa-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="far fa-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -183,7 +185,167 @@
   <!-- Main body -->
   <main id="main-body">
     <!-- TODO: Banner Section -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="p-b-30">
+      <div class="container">
+        <div class="">
+          <div class="row">
+            <div class="col-md-12 col-lg-8">
+              <div class="hero" style="background-image:url('./assets/img/hero-bg-1.png');">
+                <div class="row">
+                  <div class="col-md-6 col-lg-6">
+                    <div class="hero-wrapper active">
+                      <div class="hero-content">
+                        <div class="subtitle">
+                          <div class="text-wrapper animate__animated animate__zoomIn">
+                            <h5>Fresh and Tasty</h5>
+                          </div>
+                        </div>
+                        <div class="title">
+                          <div class="text-wrapper">
+                            <h1>
+                              Farm Market <br>
+                              Organic Shop
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="purchase">
+                        <a class="purchase-btn animate__animated animate__slideInUp">
+                          Shop Now <i class="far fa-chevron-double-right"></i>
+                        </a>
+                      </div>
 
+                    </div>
+                    <div class="hero-wrapper">
+                      <div class="hero-content">
+                        <div class="subtitle">
+                          <div class="text-wrapper animate__animated animate__zoomIn">
+                            <h5>Pure and Nature</h5>
+                          </div>
+                        </div>
+                        <div class="title">
+                          <div class="text-wrapper">
+                            <h1>
+                              Healthy Kitchen <br>
+                              With TopNotch
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="purchase">
+                        <a class="purchase-btn animate__animated animate__slideInUp">
+                          Shop Now <i class="far fa-chevron-double-right"></i>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="hero-wrapper">
+                      <div class="hero-content">
+                        <div class="subtitle">
+                          <div class="text-wrapper animate__animated animate__zoomIn">
+                            <h5>Fresh and Tasty</h5>
+                          </div>
+                        </div>
+                        <div class="title">
+                          <div class="text-wrapper">
+                            <h1>
+                              Farm Market <br>
+                              Organic Shop
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="purchase">
+                        <a class="purchase-btn animate__animated animate__slideInUp">
+                          Shop Now <i class="far fa-chevron-double-right"></i>
+                        </a>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 col-lg-6">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                          <div class="img-container">
+                            <div class="img-wrapper animate__animated">
+                              <img src="./assets/img/hero-bg.png" class="img-fluid">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-container">
+                            <div class="img-wrapper animate__animated">
+                              <img src="./assets/img/hero-bg-2.png" class="img-fluid">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="img-container">
+                            <div class="img-wrapper animate__animated">
+                              <img src="./assets/img/hero-bg.png" class="img-fluid">
+                            </div>
+                          </div>
+                        </div>
+                        ...
+                      </div>
+                      <!-- If we need navigation buttons -->
+                      <div class="hero-icon">
+
+                      </div>
+                    </div>
+                    <!-- <div class="img-wrapper">
+                      <div class="img-wrapper-left">
+                        <img src="./assets/img/hero-bg-1.png" class="img-fluid">
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="hero-sidebar-container bg-img-1" data-zoomable="true" data-effect="fade">
+                <div class="hero-content">
+                  <div class="text-wrapper">
+                    <h4 class="font-17 f-w-5">
+                      Discover <br>
+                      Real Organic<br />
+                      Flavors
+                    </h4>
+                  </div>
+                  <div class="purchase">
+                    <a href="#" class="purchase-btn">
+                      Shop Now<i class="far fa-chevron-double-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-sidebar-container bg-img-2">
+                <div class="hero-content">
+                  <div class="text-wrapper text-center">
+                    <h4 class="font-17">
+                      Summer
+                    </h4>
+                    <h1>50% off</h1>
+                    <p class="font-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, beatae?
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End Hero -->
     <!-- TODO: Product Section -->
 
     <!-- TODO: Call to action -->
@@ -251,11 +413,11 @@
           <div class="payment-method">
             <h4 class="footer-header">Payment Method</h4>
             <div class="footer-content">
-              <img src="./assets/img/card/card1.jpg" class="img-fluid me-1" alt="">
-              <img src="./assets/img/card/card2.jpg" class="img-fluid me-1" alt="">
-              <img src="./assets/img/card/card3.jpg" class="img-fluid me-1" alt="">
-              <img src="./assets/img/card/card4.jpg" class="img-fluid me-1" alt="">
-              <img src="./assets/img/card/card5.jpg" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card1.jpg" width="40" height="40" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card2.jpg" width="40" height="40" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card3.jpg" width="40" height="40" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card4.jpg" width="40" height="40" class="img-fluid me-1" alt="">
+              <img src="./assets/img/card/card5.jpg" width="40" height="40" class="img-fluid me-1" alt="">
             </div>
           </div>
           <div class="social">
@@ -293,7 +455,7 @@
       </div>
 
       <div class="mobile-block block-global">
-        <a class="menu-bar search-toggle btn-toggle" href="#">
+        <a class="menu-bar search-toggle btn-toggle" href="javascript:void(0)">
           <span class="far fa-search"></span>
           <span class="text">Search</span>
 
@@ -301,11 +463,11 @@
             <div class="mobile-search-content">
               <div class="mobile-search-result">
               </div>
-              <form role="search" method="get" class="form-search">
+              <form role="search" id="searchForm" class="form-search bx-shadow">
                 <label class="screen-reader-text" for="product-search-field-1">Search for:</label>
                 <input type="search" id="product-search-field-1" class="form-control input-text"
                   placeholder="Search products…" autocomplete="off" value="" name="s">
-                <a type="submit" value="Search" class="btn btn-submit">Search</a>
+                <button type="submit" value="Search" class="btn btn-submit">Search</button>
               </form>
             </div>
           </div>
@@ -314,8 +476,9 @@
     </div>
   </div>
   <script src="./assets/vendor/aos/aos.js"></script>
-  <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="./assets/js/top_notch_framework.js"></script>
   <script src="./assets/js/app.js"></script>
 

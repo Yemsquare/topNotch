@@ -34,13 +34,15 @@
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
-  let selectHeader = select("#main-header");
+  let selectHeader = select("#main-nav");
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add("header-scrolled");
+        selectHeader.classList.add("fixed-top");
       } else {
         selectHeader.classList.remove("header-scrolled");
+        selectHeader.classList.remove("fixed-top");
       }
     };
     window.addEventListener("load", headerScrolled);
@@ -102,8 +104,8 @@
         if (navbar.classList.contains("navbar-mobile")) {
           navbar.classList.remove("navbar-mobile");
           let navbarToggle = select(".mobile-nav-toggle");
-          navbarToggle.classList.toggle("bi-list");
-          navbarToggle.classList.toggle("bi-x");
+          navbarToggle.classList.toggle("fa-bars");
+          navbarToggle.classList.toggle("fa-times");
         }
         scrollto(this.hash);
       }
@@ -122,40 +124,70 @@
     }
   });
 
+  // mobile search
+  on("click", ".search-toggle", function (e) {
+    e.preventDefault();
+    let searchContent = select(".mobile-search .mobile-search-content");
+    searchContent.classList.toggle("active");
+  });
+
   /**
-   * Clients Slider
+   * Hero Slider
    */
-  new Swiper(".clients-slider", {
+  let bgList = ["bg-primary-rgba", "bg-secondary-rgba", "bg-success-rgba"];
+  let bgImage = ["./assets/img/hero-bg-1.png", "./assets/img/hero-bg-3.png"];
+  new Swiper(".hero .swiper", {
     speed: 400,
-    loop: true,
+    loop: false,
+    spaceBetween: 100,
     autoplay: {
-      delay: 5000,
+      delay: 10000,
       disableOnInteraction: false,
     },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
+    slidesPerView: 1,
+    allowSlideNext: true,
+    allowSlidePrev: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60,
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80,
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120,
+    on: {
+      init: function () {
+        var index = this.activeIndex;
+        let hero = select(".hero");
+        hero.classList.add("img-content");
+
+        hero.classList.remove(bgList[index] - 1);
+        hero.classList.add(bgList[index]);
+
+        hero.style.backgroundImage = `url(${bgImage[index]})`;
+
+        var heroWrapper = select(".hero .hero-wrapper");
+        var heroImageWrapper = select(".hero .img-wrapper", true);
+
+        for (let i = 0; i < heroImageWrapper.length; i++) {
+          heroImageWrapper[i].classList.add("animate__rotateInUpRight");
+        }
       },
     },
+  }).on("slideChange", function () {
+    var index = this.activeIndex;
+    var hero = select(".hero");
+
+    hero.classList.remove(bgList[index] - 1);
+    hero.classList.add(bgList[index]);
+
+    hero.style.backgroundImage = `url(${bgImage[index]})`;
+
+    var heroWrapper = select(".hero .hero-wrapper");
+
+    heroWrapper.classList.remove("active");
+    heroWrapper.classList.add("active");
+
+    var heroImageWrapper = select(".hero .img-wrapper", true);
+    for (let i = 0; i < heroImageWrapper.length; i++) {
+      heroImageWrapper[i].classList.add("animate__rotateInUpRight");
+    }
   });
 
   /**
@@ -194,8 +226,10 @@
   /**
    * Initiate portfolio lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: ".portfokio-lightbox",
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
   });
 
   /**
