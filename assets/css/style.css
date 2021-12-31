@@ -134,6 +134,19 @@ a:focus {
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
+
+.section {
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+.section-title {
+  /* padding: 10px; */
+  margin-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
 /*
  * A better looking default horizontal rule
  */
@@ -4212,6 +4225,109 @@ mark {
   .feature-container:hover .features-wrapper::after {
     bottom: -15px;
   }
+}
+
+/* ==========================================================================
+   Product classes
+   ========================================================================== */
+.product-container {
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transition: all ease-in 0.5s;
+  transition-duration: 0.3s;
+}
+.product-container .product-wrapper {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all ease 0.75s;
+  box-sizing: border-box;
+  transition: all ease-in 0.5s;
+  position: relative;
+  display: block;
+  padding-bottom: 20px;
+}
+.product-container:hover {
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 0 rgba(200, 200, 200, 0.75);
+}
+.product-container:focus {
+  box-shadow: none !important;
+}
+.product-container .product-wrapper .product-img-container {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 13px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.product-container .product-wrapper .product-img-container img {
+  width: 100%;
+}
+.product-container .product-wrapper .product-content {
+  color: var(--black);
+}
+.product-container .product-wrapper .product-content .name .category {
+  color: #8a98ac;
+  font-size: 12px;
+  font-weight: 500;
+}
+.product-container .product-wrapper .product-content .name .title h6 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--grey-90);
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.product-container .product-wrapper .purchase-product .price {
+  color: #000;
+  font-weight: 600;
+  font-size: 13px;
+}
+.product-container .product-wrapper .purchase-product .price .currency {
+  font-size: 16px;
+  margin-right: 3px;
+}
+.product-container .product-wrapper .purchase-product .add-to-cart-btn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  transition: transform ease-in 0.5s;
+  transition-delay: 0.3s;
+  margin-right: 10px;
+}
+.product-container .purchase-product .add-to-cart-btn:focus,
+.product-container .purchase-product .add-to-cart-btn:hover {
+  background-color: var(--green) !important;
+  color: #fff;
+  transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+}
+
+.btn-load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-load-more:hover {
+  background-color: var(--green-10) !important;
 }
 /* ==========================================================================
    Footer classes
